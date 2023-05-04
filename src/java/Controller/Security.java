@@ -15,8 +15,8 @@ public class Security {
 //                0x65, 0x63, 0x72, 0x65, 0x74, 0x4b, 0x65, 0x79
 //                 // thisisasecretkey
 
-    private static String cpher = Database.Cipherstr;
-    private static String keyString = Database.keystr;
+    private static String cpher = LoginServlet.Cipherstr;
+    private static String keyString = LoginServlet.keystr;
     private static byte[] key = keyString.getBytes();
 
     
