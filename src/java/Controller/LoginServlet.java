@@ -91,12 +91,7 @@ public class LoginServlet extends HttpServlet {
                     if (email.equals(rs.getString("email").trim()) && pass.equals(pword)) {
                         if(rs.getString("UserRole").trim().equals("admin")){
                             request.getRequestDispatcher("adminPage.jsp").forward(request, response);    
-                        } else {
-                            query = "SELECT * FROM USERS WHERE email = ?";
-                            ps = conn.prepareStatement(query);
-                            ps.setString(1, email);
-                            rs = ps.executeQuery();
-                            request.setAttribute("results", rs);
+                        } else {            
                             request.getRequestDispatcher("guestPage.jsp").forward(request, response);    
 
                         }
