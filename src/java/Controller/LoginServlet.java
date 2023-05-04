@@ -89,7 +89,7 @@ public class LoginServlet extends HttpServlet {
         
                 
                     if (email.equals(rs.getString("email").trim()) && pass.equals(pword)) {
-                        if(rs.getString("UserRole").trim().equals("admin")){
+                        if(rs.getString("userRole").trim().equals("admin")){
                             request.getRequestDispatcher("adminPage.jsp").forward(request, response);    
                         } else {            
                             request.getRequestDispatcher("guestPage.jsp").forward(request, response);    
